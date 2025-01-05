@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf48f7b44a10cb48af3e8fec6d9781c, type: 3}
+  m_Name: EnemyModel
+  m_EditorClassIdentifier: 
+  Quadratic: 0.1
+  Linear: 5
+  Constant: 10
+  maxHitPoint: 15
+  currentHitPoint: 3
+  OnHitPointChanged: {fileID: 11400000, guid: 61c01848d55858d4f9baf08306c28eff, type: 2}
+  OnEnemyDied: {fileID: 11400000, guid: 4678f38de86d528448f67bf384f73a17, type: 2}

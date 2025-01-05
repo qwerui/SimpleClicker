@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9e4b01110e33a4384fb6843b1899ec, type: 3}
+  m_Name: ShieldDamage
+  m_EditorClassIdentifier: 
+  id: 1001
+  Icon: {fileID: 7293623749340134194, guid: 3765a367fb48f9040bca18add088d6d3, type: 3}
+  Description: "\uBC29\uD328\uBCD1\uC758 \uACF5\uACA9\uB825 5 \uC99D\uAC00"
+  order: 1
+  preRequire:
+  - {fileID: 11400000, guid: 44f1385be11338847b59b06d20862759, type: 2}
+  Quadratic: 1
+  Linear: 5
+  Constant: 5
+  MaxUpgrade: 100

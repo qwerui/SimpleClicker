@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4995c90093fca34479a84493e39de8bb, type: 3}
+  m_Name: BowSoldierModel
+  m_EditorClassIdentifier: 
+  type: 1
+  prefab: {fileID: 2063545475783490322, guid: 1346916d96347b14a977cff20fcf089d, type: 3}
+  damageUpgrade: {fileID: 11400000, guid: 7fb0c75144e9f044ea8f112e3283d035, type: 2}
+  delayUpgrade: {fileID: 11400000, guid: aa74f2b93d30dc0438ddf95b9e289ce7, type: 2}
+  spawnUpgrade: {fileID: 11400000, guid: a80a31b1ac1761441be2b6e4515ff27a, type: 2}
+  baseDamage: 10
+  baseDelay: 2
+  damageCoefficent: 10
+  delayCoefficent: 0.1

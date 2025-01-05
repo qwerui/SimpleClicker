@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9e4b01110e33a4384fb6843b1899ec, type: 3}
+  m_Name: SwordDelay
+  m_EditorClassIdentifier: 
+  id: 1202
+  Icon: {fileID: 3580014446115393626, guid: 3765a367fb48f9040bca18add088d6d3, type: 3}
+  Description: "\uAC80\uC0AC\uC758 \uACF5\uACA9 \uB51C\uB808\uC774 0.1\uCD08 \uAC10\uC18C"
+  order: 8
+  preRequire:
+  - {fileID: 11400000, guid: b5c83d803b09e9d45bad14b6fe297a8c, type: 2}
+  Quadratic: 20
+  Linear: 200
+  Constant: 1000
+  MaxUpgrade: 10

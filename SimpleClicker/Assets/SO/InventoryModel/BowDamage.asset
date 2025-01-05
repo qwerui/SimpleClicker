@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9e4b01110e33a4384fb6843b1899ec, type: 3}
+  m_Name: BowDamage
+  m_EditorClassIdentifier: 
+  id: 1101
+  Icon: {fileID: 6943562768184086589, guid: 3765a367fb48f9040bca18add088d6d3, type: 3}
+  Description: "\uAD81\uC218\uC758 \uB370\uBBF8\uC9C0\uAC00 10 \uC99D\uAC00"
+  order: 4
+  preRequire:
+  - {fileID: 11400000, guid: a80a31b1ac1761441be2b6e4515ff27a, type: 2}
+  Quadratic: 0.5
+  Linear: 10
+  Constant: 10
+  MaxUpgrade: 100
