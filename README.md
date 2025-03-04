@@ -11,3 +11,4 @@
 - Serilog+ELK 로그 기록 
 - SO 기반 이벤트 시스템
 - Unity Authentication 적용
+- Addressable 적용(Addressable 브랜치)
