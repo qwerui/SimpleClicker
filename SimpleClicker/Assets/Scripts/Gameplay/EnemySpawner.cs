@@ -1,10 +1,16 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private EnemyModel model;
     [SerializeField] private PlayerState playerState;
-    [SerializeField] private GameObject[] enemyPrefabs;
+    [SerializeField] private string enemyLabel;
+
+    private AsyncOperationHandle enemyHandle;
+    private IList<GameObject> enemyPrefabs;
 
     private void OnEnable()
     {
@@ -14,22 +20,29 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        Spawn();
+        var handle = Addressables.LoadAssetsAsync<GameObject>(enemyLabel);
+        handle.Completed += (op) =>
+        {
+            enemyPrefabs = op.Result;
+            Spawn();
+        };
+        enemyHandle = handle;
     }
 
     private void Spawn()
     {
-        if(enemyPrefabs.Length == 0)
+        if(enemyPrefabs.Count == 0)
         {
             return;
         }
 
-        Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Length)], transform);
+        Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Count)], transform);
         model.Init(playerState.EnemyKillCount);
     }
 
     private void OnDisable()
     {
+        enemyHandle.Release();
         model.OnEnemyDied.Callback -= Spawn;
     }
 }

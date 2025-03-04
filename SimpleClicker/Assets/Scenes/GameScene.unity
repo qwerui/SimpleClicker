@@ -1180,19 +1180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 11400000, guid: 850c303eb03cfed4682af447303dd778, type: 2}
-  enemyPrefabs:
-  - {fileID: 7238501412250273493, guid: 8025ac6ff8cfb8f45a4326b6a264e3fe, type: 3}
-  - {fileID: 7238501412250273493, guid: b7d2585887ea16846a28bd99f320372b, type: 3}
-  - {fileID: 7238501412250273493, guid: 4259e2b2d5cd0564c80a26939d19c7a5, type: 3}
-  - {fileID: 7238501412250273493, guid: e21502911b7ab2943aaef8881119e7ac, type: 3}
-  - {fileID: 7238501412250273493, guid: a4755e2480d54a94abd218190d648654, type: 3}
-  - {fileID: 7238501412250273493, guid: 8c0d8ff86e5ca3c42a3b145d783e17fc, type: 3}
-  - {fileID: 7238501412250273493, guid: 733be0d40b1120d488bb2acceb3eef1b, type: 3}
-  - {fileID: 7238501412250273493, guid: 379f8347abd9d8045b1281be6fd030bd, type: 3}
-  - {fileID: 7238501412250273493, guid: ebf5c1622dde1b444bfcb67e0df3df44, type: 3}
-  - {fileID: 7238501412250273493, guid: e53cc3a14d1222c4ca7e73d9fcc2664d, type: 3}
-  - {fileID: 7238501412250273493, guid: 8164c64e2a6799a4db24f22af2d92c53, type: 3}
-  - {fileID: 7238501412250273493, guid: 0d72066c47974ec41ae848e413b6523a, type: 3}
+  enemyLabel: Enemy
 --- !u!1 &517610414
 GameObject:
   m_ObjectHideFlags: 0
@@ -3647,7 +3635,7 @@ RectTransform:
   - {fileID: 1093709966}
   m_Father: {fileID: 718514338}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.05087719, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}

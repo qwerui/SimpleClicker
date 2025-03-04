@@ -48,8 +48,6 @@ namespace ClickerBackend.Controllers
         [Route("init")]
         public async Task<IActionResult> Post([FromForm] string userId)
         {
-            Log.Information("Initialize Game : "+userId);
-
             if(userId == null)
             {
                 return BadRequest();

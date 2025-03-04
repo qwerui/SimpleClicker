@@ -5,16 +5,24 @@ using Unity.Services.Authentication;
 using Unity.Services.Core;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.AddressableAssets;
 using UnityEngine.UI;
+using UnityEngine.AddressableAssets.ResourceLocators;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class GameInitializer : MonoBehaviour
 {
+    private bool downloadStart = false;
+
     public GameObject authPanel;
     public Text statusText;
+    public DownloadPanel downloadPanel;
 
     public List<InventoryData> inventoryDatas = new();
     readonly Dictionary<int, InventoryData> inventoryPair = new();
     Dictionary<string, string> header = new Dictionary<string, string>();
+
+    Coroutine pipeline;
 
     private void Awake()
     {
@@ -31,8 +39,15 @@ public class GameInitializer : MonoBehaviour
         AuthenticationService.Instance.SignedIn += StartGame;
     }
 
+    public void StartDownload() => downloadStart = true;
+
     public void OnClickPanel()
     {
+        if(downloadStart)
+        {
+            return;
+        }
+
         if(!AuthenticationService.Instance.SessionTokenExists)
         {
             authPanel.SetActive(true);
@@ -58,16 +73,17 @@ public class GameInitializer : MonoBehaviour
 
     void StartGame()
     {
-        statusText.text = "Initializing...";
-        StartCoroutine(InitializePipeline());
+        pipeline = StartCoroutine(InitializePipeline());
     }
 
     IEnumerator InitializePipeline()
     {
-        //yield return StartCoroutine(DownloadAddressable());
+        
         yield return StartCoroutine(CheckUser());
+        yield return StartCoroutine(DownloadAddressable());
+        statusText.text = "Initializing...";
         yield return StartCoroutine(InitializeGameData());
-        GameManager.Instance.LoadScene("GameScene");
+        GameManager.Instance.LoadScene("Assets/Scenes/GameScene.unity", true);
     }
 
     private IEnumerator CheckUser()
@@ -92,7 +108,76 @@ public class GameInitializer : MonoBehaviour
 
     IEnumerator DownloadAddressable()
     {
-        yield return null;
+        yield return Addressables.InitializeAsync(true);
+
+        List<string> catalogsToUpdate = new List<string>();
+        
+        AsyncOperationHandle<List<string>> checkForUpdateHandle = Addressables.CheckForCatalogUpdates(true);
+        checkForUpdateHandle.Completed += op =>
+        {
+            catalogsToUpdate.AddRange(op.Result);
+        };
+        yield return checkForUpdateHandle;
+
+        List<IResourceLocator> locators = new List<IResourceLocator>();
+
+        Debug.Log("Catalogs : " + catalogsToUpdate.Count);
+
+        if (catalogsToUpdate.Count > 0)
+        {
+            AsyncOperationHandle<List<IResourceLocator>> updateHandle = Addressables.UpdateCatalogs(true, catalogsToUpdate, true);
+            updateHandle.Completed += op =>
+            {
+                locators = op.Result;
+            };
+            yield return updateHandle;
+        }
+        else
+        {
+            locators.AddRange(Addressables.ResourceLocators);
+        }
+
+        List<object> keys = new List<object>();
+        long downloadSize = 0;
+
+        if (locators.Count > 0)
+        {
+            foreach (var locator in locators)
+            {
+                keys.AddRange(locator.Keys);
+            }
+
+            var sizeHandle = Addressables.GetDownloadSizeAsync(keys);
+            sizeHandle.Completed += op =>
+            {
+                downloadSize = op.Result;
+                Debug.Log("Download Size : "+op.Result);
+                Addressables.Release(sizeHandle);
+            };
+            yield return sizeHandle;
+        }
+
+        if (downloadSize > 0)
+        {
+            downloadPanel.SetDataSizeText(downloadSize);
+            downloadPanel.gameObject.SetActive(true);
+
+            while(true)
+            {
+                if(downloadStart)
+                {
+                    break;
+                }
+                yield return null;
+            }
+
+            AsyncOperationHandle downloadHandle = Addressables.DownloadDependenciesAsync(keys, Addressables.MergeMode.None, true);
+            while (!downloadHandle.IsDone)
+            {
+                statusText.text = $"다운로드 중 : {downloadHandle.PercentComplete*100}%";
+                yield return null;
+            }
+        }
     }
 
     /// <summary>
@@ -112,6 +197,7 @@ public class GameInitializer : MonoBehaviour
                 var playerState = GameManager.Instance.playerState;
                 playerState.ClickCount = dto.clickCount;
                 playerState.TotalGold = dto.totalGold;
+                playerState.EnemyKillCount = dto.killCount;
                 playerState.Gold = dto.gold;
                 playerState.ClickCount = dto.clickCount;
                 
@@ -150,6 +236,14 @@ public class GameInitializer : MonoBehaviour
             {
                 inventory.UpgradeCount = 0;
             }
+        }
+    }
+
+    public void StopPipeline()
+    {
+        if(pipeline != null)
+        {
+            StopCoroutine(pipeline);
         }
     }
 

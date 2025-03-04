@@ -32,5 +32,5 @@ public class GameManager : Singleton<GameManager>
         step = GameStep.None;
     }
 
-    public void LoadScene(string sceneName) => sceneLoader.LoadScene(sceneName);
+    public void LoadScene(string sceneName, bool isAddressable = false) => sceneLoader.LoadScene(sceneName, isAddressable);
 }

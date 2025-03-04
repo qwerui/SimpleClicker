@@ -1,0 +1,284 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Remote Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Remote Group
+  m_GUID: 542ebd19a44ddda4fbb0421b203280c9
+  m_SerializeEntries:
+  - m_GUID: 05e81f9ca8c32d144be532f2f2d5c2ea
+    m_Address: Assets/Sprites/Square.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0cc98cf945627544e8761d70cbbbb24a
+    m_Address: Assets/Sprites/Jelly/UI/Icon 3 Over.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1117d5f41aab9fd4bb7edf12579a2fa9
+    m_Address: Assets/Audio/Jelly/Sell.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 14cbb79d17bbcb4488f2f84c10898056
+    m_Address: Assets/Sprites/Jelly/UI/Lock.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1edfcc716ab5b4940a23aa75e0352142
+    m_Address: Assets/Sprites/Jelly/UI/Icon 3.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 228a414c02aae104093ef692ae2bae7d
+    m_Address: Assets/Audio/Jelly/Grow.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 22fafc3e4b16258438fb4240603b1949
+    m_Address: Assets/Sprites/Jelly/UI/Icon 5 Over.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 230db3240b492574094d76e3dbd404a1
+    m_Address: Assets/Sprites/Jelly/InGame/Jelly 4.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2d5d6782fc427ad498ff00ded71060f4
+    m_Address: Assets/Sprites/Jelly/InGame/Jelly 6.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2d77a98d162c5ab45b0b5a457ec644fe
+    m_Address: Assets/Audio/Jelly/Fail.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2fc58d986242aa845b0c76cfcba21fcc
+    m_Address: Assets/Audio/Jelly/Pause Out.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3b7cea2252b4b6b45bab4864f9faeef8
+    m_Address: Assets/Audio/Jelly/Clear.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4678f38de86d528448f67bf384f73a17
+    m_Address: Assets/SO/Events/EnemyDiedEvent.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4a4e38441adaaf64c9251018be41c8f6
+    m_Address: Assets/Sprites/Jelly/UI/Icon 1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4dd5e06325bfefe43b967bbeb150233e
+    m_Address: Assets/Sprites/War
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 526edf75fa93d364fbb3eeb1a06a6f47
+    m_Address: Assets/Sprites/Jelly/UI/Icon 2 Over.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 590b73e132435194da7d40dc8a3816f0
+    m_Address: Assets/Sprites/Jelly/InGame/Jelly 2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 61c01848d55858d4f9baf08306c28eff
+    m_Address: Assets/SO/Events/EnemyHitPointChangeEvent.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6de610ccbbc0a094b804153e2dea43a6
+    m_Address: Assets/Sprites/Jelly/InGame/Jelly 7.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 764f930ba03e6324d805335eb66b8c98
+    m_Address: Assets/Sprites/Jelly/InGame/Jelly 11.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d1b8c1a026022641af7b846a3d34c63
+    m_Address: Assets/Sprites/Jelly/UI/Icon 7.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7ea52d616d157c947a0765439d1ae441
+    m_Address: Assets/Sprites/Jelly/UI/Icon 5.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7fd151f4d9de8de47a1d5abe6e506e83
+    m_Address: Assets/Sprites/Jelly/InGame/Jelly 10.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 850c303eb03cfed4682af447303dd778
+    m_Address: Assets/SO/EnemyModel.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86f68579e1c470645a783c40f4271052
+    m_Address: Assets/Sprites/Jelly/UI/Icon 4 Over.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c291ea76b300004981c2c3b750a600a
+    m_Address: Assets/Prefabs/Soldier
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c9cfa26abfee488c85f1582747f6a02
+    m_Address: Assets/Scenes/GameScene.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e85598c65aa8204f98aac13d6aedf6f
+    m_Address: Assets/Sprites/Jelly/UI/Panel Under.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 932ce8ce7b8fd8e4d9fb9bce6a7e0b7d
+    m_Address: Assets/Sprites/Jelly/InGame/Jelly 1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9396d80065b15fb4e9f5fa16deb1841a
+    m_Address: Assets/Sprites/Jelly/UI/Medal.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 96481b76a6fa9c6428e4e4b1522e9378
+    m_Address: Assets/Sprites/Jelly/InGame/Jelly 8.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a2b1efbe52bb7e8469a0f71be94ca717
+    m_Address: Assets/Sprites/Jelly/UI/Icon Shadow.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a98611fa7dbd0434bbd898bf5a002727
+    m_Address: Assets/SO/Events/GameClearEvent.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aa2fb7237097e5a44b6f63d8b4a19338
+    m_Address: Assets/Prefabs/Enemy
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Enemy
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b1d81fd4029ff3f47bbb0da5379cd31d
+    m_Address: Assets/Sprites/Jelly/UI/Icon 6.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b2339d42d71ef8646b214a6c12e95d54
+    m_Address: Assets/Audio/Jelly/Touch.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b8fd21ad16123364aaee0da8f1b3746b
+    m_Address: Assets/Sprites/Jelly/InGame/Jelly 5.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b9826722401b10c48992679ee993694a
+    m_Address: Assets/SO/SoldierModel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bf2b31ceb6a9bab4d93edffe34b2eae6
+    m_Address: Assets/Sprites/Jelly/UI/Panel Border.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ce60f325abe16e1408f2d226e825c21a
+    m_Address: Assets/Sprites/Jelly/InGame/Jelly 3.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d3e05fdda1918b647853bf0b9e5454fa
+    m_Address: Assets/SO/Events/ClickEvent.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d419044f4528c924c8246806ad0bfb4b
+    m_Address: Assets/Audio/Jelly/Buy.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d46fc59147b0a984db39e2091afb865b
+    m_Address: Assets/Audio/Jelly/Pause In.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d4bb5b2bf799cbe48896bb8c60334f41
+    m_Address: Assets/Sprites/Jelly/UI/Icon 2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d78e009f5bb799b42bbf3c801af824ac
+    m_Address: Assets/Sprites/Jelly/InGame/Jelly 9.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dc19f642807b5bc4faef18b20134d696
+    m_Address: Assets/Audio/Jelly/Unlock.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e91736cf9d7c7124a9ae339dbd040c60
+    m_Address: Assets/SO/Events/EnemyDamageEvent.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ecb29f6b340844b4b801257686a66cb0
+    m_Address: Assets/Animations/Jelly
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1bc863282ab96d4999b363e7848641f
+    m_Address: Assets/Animations/War
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f4ba7a5e8b25ae241a6c94d4d6df858d
+    m_Address: Assets/Sprites/Jelly/InGame/Jelly 0.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f752d344d11683842a810ca1ce47728d
+    m_Address: Assets/Sprites/Jelly/UI/Icon 4.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: feabaf7052f4d8e4daf77e40668bc2b6
+    m_Address: Assets/Sprites/Jelly/UI/Icon 0.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 48b15a681d4430e4fadad89eac7cc824, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d39687497bc06b648a3ece3061a2c28e, type: 2}
+    - {fileID: 11400000, guid: c4fe63081ecd6154b8336520e0a7af62, type: 2}
